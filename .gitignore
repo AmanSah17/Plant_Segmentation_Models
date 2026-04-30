@@ -22,6 +22,7 @@ Data_exploration/data/archive/
 # Training outputs and experiment artifacts
 plantseg_training/outputs/
 plantseg_training/README.md
+plantseg_training/processed/
 mlruns/
 *.pt
 *.pth

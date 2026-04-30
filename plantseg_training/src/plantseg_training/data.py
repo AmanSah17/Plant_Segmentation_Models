@@ -23,6 +23,7 @@ SPLIT_TO_DIR = {
 class PlantSegDataConfig:
     root_dir: Path
     metadata_csv: Path
+    processed_mask_dir: Path | None = None
     image_size: int = 256
     task: str = "binary_segmentation"
 
@@ -31,8 +32,10 @@ class PlantSegDataset(Dataset):
     """PlantSeg image/mask dataset for semantic segmentation."""
 
     def __init__(self, cfg: PlantSegDataConfig, split: str) -> None:
-        if cfg.task != "binary_segmentation":
-            raise ValueError(f"Unsupported task for this baseline: {cfg.task}")
+        if cfg.task not in {"binary_segmentation", "multiclass_segmentation"}:
+            raise ValueError(f"Unsupported task: {cfg.task}")
+        if cfg.task == "multiclass_segmentation" and cfg.processed_mask_dir is None:
+            raise ValueError("multiclass_segmentation requires dataset.processed_mask_dir")
 
         self.cfg = cfg
         self.split = split
@@ -48,7 +51,10 @@ class PlantSegDataset(Dataset):
     def __getitem__(self, index: int) -> dict[str, Any]:
         row = self.frame.iloc[index]
         image_path = self.cfg.root_dir / "images" / self.split_dir / row["Name"]
-        mask_path = self.cfg.root_dir / "annotations" / self.split_dir / row["Label file"]
+        if self.cfg.task == "multiclass_segmentation":
+            mask_path = self.cfg.processed_mask_dir / self.split_dir / row["Label file"]
+        else:
+            mask_path = self.cfg.root_dir / "annotations" / self.split_dir / row["Label file"]
 
         image = Image.open(image_path).convert("RGB")
         mask = Image.open(mask_path).convert("L")
@@ -58,7 +64,10 @@ class PlantSegDataset(Dataset):
 
         image_tensor = TF.to_tensor(image)
         mask_array = np.array(mask, dtype=np.uint8)
-        mask_tensor = torch.from_numpy((mask_array > 0).astype(np.float32)).unsqueeze(0)
+        if self.cfg.task == "multiclass_segmentation":
+            mask_tensor = torch.from_numpy(mask_array.astype(np.int64))
+        else:
+            mask_tensor = torch.from_numpy((mask_array > 0).astype(np.float32)).unsqueeze(0)
 
         return {
             "pixel_values": image_tensor,
@@ -72,6 +81,7 @@ def make_datasets(dataset_cfg: dict[str, Any]) -> tuple[PlantSegDataset, PlantSe
     cfg = PlantSegDataConfig(
         root_dir=Path(dataset_cfg["root_dir"]),
         metadata_csv=Path(dataset_cfg["metadata_csv"]),
+        processed_mask_dir=Path(dataset_cfg["processed_mask_dir"]) if dataset_cfg.get("processed_mask_dir") else None,
         image_size=int(dataset_cfg.get("image_size", 256)),
         task=dataset_cfg.get("task", "binary_segmentation"),
     )

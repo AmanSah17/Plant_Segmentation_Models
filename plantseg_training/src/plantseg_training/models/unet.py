@@ -6,7 +6,7 @@ from typing import Any
 import torch
 from torch import nn
 
-from plantseg_training.metrics import bce_dice_loss
+from plantseg_training.metrics import segmentation_loss_with_logits
 
 
 class ConvBlock(nn.Module):
@@ -37,11 +37,9 @@ class UNetForBinarySegmentation(nn.Module):
         num_classes: int = 1,
         features: tuple[int, ...] = (64, 128, 256, 512),
         dropout: float = 0.0,
+        loss: dict[str, Any] | None = None,
     ) -> None:
         super().__init__()
-        if num_classes != 1:
-            raise ValueError("This first U-Net baseline expects num_classes=1 for binary masks.")
-
         self.down_blocks = nn.ModuleList()
         self.up_transposes = nn.ModuleList()
         self.up_blocks = nn.ModuleList()
@@ -61,6 +59,7 @@ class UNetForBinarySegmentation(nn.Module):
             current_channels = feature
 
         self.classifier = nn.Conv2d(features[0], num_classes, kernel_size=1)
+        self.loss_cfg = loss or {}
 
     def forward(self, pixel_values: torch.Tensor, labels: torch.Tensor | None = None, **_: Any) -> dict[str, torch.Tensor]:
         skips = []
@@ -84,5 +83,5 @@ class UNetForBinarySegmentation(nn.Module):
         logits = self.classifier(x)
         output = {"logits": logits}
         if labels is not None:
-            output["loss"] = bce_dice_loss(logits, labels)
+            output["loss"] = segmentation_loss_with_logits(logits, labels, self.loss_cfg)
         return output
