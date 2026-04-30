@@ -1,0 +1,40 @@
+{
+  "experiment_name": "plantseg-binary-segmentation",
+  "run_name": "unet-baseline-256",
+  "seed": 42,
+  "dataset": {
+    "root_dir": "Data_exploration/data/archive/plantsegv2",
+    "metadata_csv": "Data_exploration/data/archive/plantsegv2/Metadatav2.csv",
+    "task": "binary_segmentation",
+    "image_size": 256,
+    "num_workers": 4,
+    "pin_memory": true
+  },
+  "model": {
+    "name": "unet",
+    "in_channels": 3,
+    "num_classes": 1,
+    "features": [64, 128, 256, 512],
+    "dropout": 0.0
+  },
+  "training": {
+    "output_dir": "plantseg_training/outputs/unet_binary",
+    "mlflow_tracking_uri": "plantseg_training/outputs/mlruns",
+    "require_cuda": true,
+    "num_train_epochs": 200,
+    "per_device_train_batch_size": 8,
+    "per_device_eval_batch_size": 8,
+    "gradient_accumulation_steps": 1,
+    "learning_rate": 0.0001,
+    "weight_decay": 0.0001,
+    "warmup_ratio": 0.05,
+    "logging_steps": 25,
+    "eval_strategy": "epoch",
+    "save_strategy": "epoch",
+    "save_total_limit": 3,
+    "metric_for_best_model": "eval_dice",
+    "greater_is_better": true,
+    "fp16": true,
+    "threshold": 0.5
+  }
+}

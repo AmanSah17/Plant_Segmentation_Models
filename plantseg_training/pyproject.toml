@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "plantseg-training"
+version = "0.1.0"
+description = "Modular PlantSeg segmentation experiments with Hugging Face Trainer and MLflow."
+requires-python = ">=3.10"
+dependencies = [
+  "torch",
+  "torchvision",
+  "transformers",
+  "accelerate",
+  "mlflow",
+  "pandas",
+  "numpy==2.1.1",
+  "opencv-contrib-python==4.13.0.92",
+  "opencv-python==4.13.0.92",
+  "opencv-python-headless==4.13.0.92",
+  "Pillow",
+  "scikit-learn"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

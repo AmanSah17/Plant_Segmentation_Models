@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local temp files
+.tmp/
+.tmp*/
+
+# Data and large generated assets
+Data_exploration/data/archive.zip
+Data_exploration/data/archive/
+
+# Training outputs and experiment artifacts
+plantseg_training/outputs/
+plantseg_training/README.md
+mlruns/
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
