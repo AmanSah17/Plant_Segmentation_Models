@@ -1,0 +1,116 @@
+Plant,Disease,images
+Apple,apple black rot,83
+Apple,apple mosaic virus,89
+Apple,apple rust,139
+Apple,apple scab,258
+Banana,banana anthracnose,71
+Banana,banana black leaf streak,167
+Banana,banana bunchy top,157
+Banana,banana cigar end rot,60
+Banana,banana cordana leaf spot,55
+Banana,banana panama disease,63
+Basil,basil downy mildew,63
+Bean,bean halo blight,56
+Bean,bean mosaic virus,58
+Bean,bean rust,115
+Bell pepper,bell pepper bacterial spot,76
+Bell pepper,bell pepper blossom end rot,112
+Bell pepper,bell pepper frogeye leaf spot,31
+Bell pepper,bell pepper powdery mildew,28
+Blueberry,blueberry anthracnose,42
+Blueberry,blueberry botrytis blight,36
+Blueberry,blueberry mummy berry,47
+Blueberry,blueberry rust,43
+Blueberry,blueberry scorch,43
+Broccoli,broccoli alternaria leaf spot,65
+Broccoli,broccoli downy mildew,29
+Broccoli,broccoli ring spot,16
+Cabbage,cabbage alternaria leaf spot,61
+Cabbage,cabbage black rot,131
+Cabbage,cabbage downy mildew,84
+Carrot,carrot alternaria leaf blight,60
+Carrot,carrot cavity spot,72
+Carrot,carrot cercospora leaf blight,19
+Cauliflower,cauliflower alternaria leaf spot,54
+Cauliflower,cauliflower bacterial soft rot,36
+Celery,celery anthracnose,29
+Celery,celery early blight,36
+Cherry,cherry leaf spot,106
+Cherry,cherry powdery mildew,33
+Citrus,citrus canker,390
+Citrus,citrus greening disease,133
+Coffee,coffee berry blotch,118
+Coffee,coffee black rot,7
+Coffee,coffee brown eye spot,20
+Coffee,coffee leaf rust,159
+Corn,corn gray leaf spot,107
+Corn,corn northern leaf blight,130
+Corn,corn rust,177
+Corn,corn smut,202
+Cucumber,cucumber angular leaf spot,182
+Cucumber,cucumber bacterial wilt,108
+Cucumber,cucumber powdery mildew,188
+Eggplant,eggplant cercospora leaf spot,60
+Eggplant,eggplant phomopsis fruit rot,46
+Eggplant,eggplant phytophthora blight,33
+Garlic,garlic leaf blight,92
+Garlic,garlic rust,106
+Ginger,ginger leaf spot,25
+Ginger,ginger sheath blight,68
+Grape,grape black rot,122
+Grape,grape downy mildew,280
+Grape,grape leaf spot,91
+Grapevine,grapevine leafroll disease,71
+Lettuce,lettuce downy mildew,84
+Lettuce,lettuce mosaic virus,39
+Maple,maple tar spot,114
+Peach,peach anthracnose,13
+Peach,peach brown rot,173
+Peach,peach leaf curl,182
+Peach,peach rust,8
+Peach,peach scab,78
+Plum,plum bacterial spot,16
+Plum,plum brown rot,81
+Plum,plum pocket disease,57
+Plum,plum pox virus,33
+Plum,plum rust,34
+Potato,potato early blight,126
+Potato,potato late blight,117
+Raspberry,raspberry fire blight,34
+Raspberry,raspberry gray mold,40
+Raspberry,raspberry leaf spot,18
+Raspberry,raspberry yellow rust,37
+Rice,rice blast,83
+Rice,rice sheath blight,76
+Soybean,bean rust,118
+Soybean,soybean bacterial blight,91
+Soybean,soybean brown spot,71
+Soybean,soybean downy mildew,153
+Soybean,soybean frog eye leaf spot,238
+Soybean,soybean mosaic,117
+Squash,squash powdery mildew,182
+Strawberry,strawberry anthracnose,58
+Strawberry,strawberry leaf scorch,39
+Tobacco,tobacco blue mold,60
+Tobacco,tobacco brown spot,66
+Tobacco,tobacco frogeye leaf spot,28
+Tobacco,tobacco mosaic virus,41
+Tomato,tomato bacterial leaf spot,109
+Tomato,tomato early blight,187
+Tomato,tomato late blight,163
+Tomato,tomato leaf mold,156
+Tomato,tomato mosaic virus,63
+Tomato,tomato septoria leaf spot,130
+Tomato,tomato yellow leaf curl virus,93
+Wheat,wheat bacterial leaf streak (black chaff),117
+Wheat,wheat head scab,319
+Wheat,wheat leaf rust,132
+Wheat,wheat loose smut,215
+Wheat,wheat powdery mildew,271
+Wheat,wheat septoria blotch,232
+Wheat,wheat stem rust,148
+Wheat,wheat stripe rust,358
+Zucchini,zucchini bacterial wilt,70
+Zucchini,zucchini downy mildew,44
+Zucchini,zucchini powdery mildew,213
+Zucchini,zucchini yellow mosaic virus,95

@@ -1,0 +1,13 @@
+{
+  "rows": 11458,
+  "plants": 35,
+  "diseases": 114,
+  "num_classes_including_background": 115,
+  "splits": {
+    "Training": 7916,
+    "Test": 2295,
+    "Validation": 1247
+  },
+  "raw_index_min": 0,
+  "raw_index_max": 114
+}

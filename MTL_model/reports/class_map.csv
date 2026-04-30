@@ -1,0 +1,116 @@
+class_id,Index,Plant,Disease
+0,-1,Background,background
+1,0,Apple,apple black rot
+2,1,Apple,apple mosaic virus
+3,2,Apple,apple rust
+4,3,Apple,apple scab
+5,4,Banana,banana anthracnose
+6,5,Banana,banana black leaf streak
+7,6,Banana,banana bunchy top
+8,7,Banana,banana cigar end rot
+9,8,Banana,banana cordana leaf spot
+10,9,Banana,banana panama disease
+11,10,Basil,basil downy mildew
+12,11,Bean,bean halo blight
+13,12,Bean,bean mosaic virus
+14,13,Bean,bean rust
+15,14,Bell pepper,bell pepper bacterial spot
+16,15,Bell pepper,bell pepper blossom end rot
+17,16,Bell pepper,bell pepper frogeye leaf spot
+18,17,Bell pepper,bell pepper powdery mildew
+19,18,Blueberry,blueberry anthracnose
+20,19,Blueberry,blueberry botrytis blight
+21,20,Blueberry,blueberry mummy berry
+22,21,Blueberry,blueberry rust
+23,22,Blueberry,blueberry scorch
+24,23,Broccoli,broccoli alternaria leaf spot
+25,24,Broccoli,broccoli downy mildew
+26,25,Broccoli,broccoli ring spot
+27,26,Cabbage,cabbage alternaria leaf spot
+28,27,Cabbage,cabbage black rot
+29,28,Cabbage,cabbage downy mildew
+30,29,Carrot,carrot alternaria leaf blight
+31,30,Carrot,carrot cavity spot
+32,31,Carrot,carrot cercospora leaf blight
+33,32,Cauliflower,cauliflower alternaria leaf spot
+34,33,Cauliflower,cauliflower bacterial soft rot
+35,34,Celery,celery anthracnose
+36,35,Celery,celery early blight
+37,36,Cherry,cherry leaf spot
+38,37,Cherry,cherry powdery mildew
+39,38,Citrus,citrus canker
+40,39,Citrus,citrus greening disease
+41,40,Coffee,coffee berry blotch
+42,41,Coffee,coffee black rot
+43,42,Coffee,coffee brown eye spot
+44,43,Coffee,coffee leaf rust
+45,44,Corn,corn gray leaf spot
+46,45,Corn,corn northern leaf blight
+47,46,Corn,corn rust
+48,47,Corn,corn smut
+49,48,Cucumber,cucumber angular leaf spot
+50,49,Cucumber,cucumber bacterial wilt
+51,50,Cucumber,cucumber powdery mildew
+52,51,Eggplant,eggplant cercospora leaf spot
+53,52,Eggplant,eggplant phomopsis fruit rot
+54,53,Eggplant,eggplant phytophthora blight
+55,54,Garlic,garlic leaf blight
+56,55,Garlic,garlic rust
+57,56,Ginger,ginger leaf spot
+58,57,Ginger,ginger sheath blight
+59,58,Grape,grape black rot
+60,59,Grape,grape downy mildew
+61,60,Grape,grape leaf spot
+62,61,Grapevine,grapevine leafroll disease
+63,62,Lettuce,lettuce downy mildew
+64,63,Lettuce,lettuce mosaic virus
+65,64,Maple,maple tar spot
+66,65,Peach,peach anthracnose
+67,66,Peach,peach brown rot
+68,67,Peach,peach leaf curl
+69,68,Peach,peach rust
+70,69,Peach,peach scab
+71,70,Plum,plum bacterial spot
+72,71,Plum,plum brown rot
+73,72,Plum,plum pocket disease
+74,73,Plum,plum pox virus
+75,74,Plum,plum rust
+76,75,Potato,potato early blight
+77,76,Potato,potato late blight
+78,77,Raspberry,raspberry fire blight
+79,78,Raspberry,raspberry gray mold
+80,79,Raspberry,raspberry leaf spot
+81,80,Raspberry,raspberry yellow rust
+82,81,Rice,rice blast
+83,82,Rice,rice sheath blight
+84,83,Soybean,soybean bacterial blight
+85,84,Soybean,soybean brown spot
+86,85,Soybean,soybean downy mildew
+87,86,Soybean,soybean frog eye leaf spot
+88,87,Soybean,soybean mosaic
+89,89,Squash,squash powdery mildew
+90,90,Strawberry,strawberry anthracnose
+91,91,Strawberry,strawberry leaf scorch
+92,92,Tobacco,tobacco blue mold
+93,93,Tobacco,tobacco brown spot
+94,94,Tobacco,tobacco frogeye leaf spot
+95,95,Tobacco,tobacco mosaic virus
+96,96,Tomato,tomato bacterial leaf spot
+97,97,Tomato,tomato early blight
+98,98,Tomato,tomato late blight
+99,99,Tomato,tomato leaf mold
+100,100,Tomato,tomato mosaic virus
+101,101,Tomato,tomato septoria leaf spot
+102,102,Tomato,tomato yellow leaf curl virus
+103,103,Wheat,wheat bacterial leaf streak (black chaff)
+104,104,Wheat,wheat head scab
+105,105,Wheat,wheat leaf rust
+106,106,Wheat,wheat loose smut
+107,107,Wheat,wheat powdery mildew
+108,108,Wheat,wheat septoria blotch
+109,109,Wheat,wheat stem rust
+110,110,Wheat,wheat stripe rust
+111,111,Zucchini,zucchini bacterial wilt
+112,112,Zucchini,zucchini downy mildew
+113,113,Zucchini,zucchini powdery mildew
+114,114,Zucchini,zucchini yellow mosaic virus

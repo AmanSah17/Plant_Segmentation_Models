@@ -22,8 +22,8 @@ METADATA_CSV    = DATA_ROOT / "Metadatav2.csv"
 # Pre-processed multiclass masks (pixel = class_id 0-114)
 MASKS_DIR       = PROJECT_ROOT / "plantseg_training/processed/multiclass/masks"  # {train,val,test}/<name>.png
 
-# Reports / class info
-REPORTS_DIR     = PROJECT_ROOT / "plantseg_training/processed/multiclass/reports"
+# Reports / class info (moved to MTL_model/reports for portability)
+REPORTS_DIR     = MTL_DIR / "reports"
 CLASS_MAP_CSV   = REPORTS_DIR / "class_map.csv"
 CLASS_PIXEL_CSV = REPORTS_DIR / "class_pixel_counts.csv"
 
@@ -80,7 +80,7 @@ NUM_SEG_QUERIES = NUM_PATCHES  # one query per patch position
 # ────────────────────────────────────────────────────────────
 BATCH_SIZE         = 16
 NUM_WORKERS        = 4
-MAX_EPOCHS         = 120
+MAX_EPOCHS         = 150
 
 LEARNING_RATE      = 1e-4
 LR_REDUCE_FACTOR   = 0.5
@@ -114,7 +114,7 @@ MLFLOW_RUN_TAGS    = {
 # K-FOLD CROSS-VALIDATION + HP TUNING
 # ────────────────────────────────────────────────────────────
 KFOLD_K         = 5          # default number of folds
-KFOLD_EPOCHS    = 120        # max epochs per fold
+KFOLD_EPOCHS    = 150        # max epochs per fold
 N_OPTUNA_TRIALS = 10         # number of HP search trials
 
 # Hyperparameter search space
